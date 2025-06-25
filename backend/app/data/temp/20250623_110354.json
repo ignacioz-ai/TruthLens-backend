@@ -1,0 +1,62 @@
+{
+  "text": "Amid rising tensions, government officials warn that the recent surge in immigration poses a \"serious threat to national stability.\" Meanwhile, independent reports suggest the influx has had a neutral or even positive economic impact. A viral video showing a confrontation at the border has sparked outrage online, though fact-checkers later revealed it was taken out of context. Experts urge the public to avoid jumping to conclusions and await verified information.",
+  "analysis": {
+    "factual_accuracy": 75,
+    "bias": "neutral",
+    "emotional_tone": "mixed",
+    "recommendation": "The article provides a balanced view by presenting different perspectives on the issue of immigration. However, it could benefit from offering more detailed evidence to support the claims made, especially regarding the economic impact of immigration and the context of the viral video. Including direct quotes from experts and linking to the independent reports mentioned would enhance the article's credibility.",
+    "analysis_explanation": {
+      "factual_accuracy": {
+        "score": 75,
+        "key_indicators": "Presence of independent reports and fact-checking efforts.",
+        "examples_from_text": "Independent reports suggest the influx has had a neutral or even positive economic impact.",
+        "weight_of_factors": "Balanced by the lack of direct evidence or detailed analysis provided.",
+        "comparison_with_similar_content": "Similar articles often provide more detailed data and expert opinions to support their claims."
+      },
+      "bias": {
+        "classification": "Neutral",
+        "language_patterns": "The article presents multiple viewpoints without promoting one over the other.",
+        "examples_of_bias": "",
+        "context_and_implications": "By covering different aspects of the issue, the article avoids taking a partisan stance.",
+        "effect_on_message": "The neutral stance helps to present a more comprehensive view of the situation."
+      },
+      "emotional_tone": {
+        "classification": "Mixed",
+        "emotional_language_patterns": "Use of words like 'serious threat' and 'outrage' alongside calls for patience and verification.",
+        "examples_of_emotional_language": "'serious threat to national stability', 'sparked outrage online'",
+        "impact_on_message": "The mixed tone reflects the complexity of the issue but may affect the perceived neutrality.",
+        "effect_on_credibility": "The emotional language used could potentially bias readers' perceptions, despite the overall neutral stance."
+      },
+      "recommendation": {
+        "text": "To enhance credibility and provide a more informative perspective, the article should include more detailed evidence and direct quotes from experts. Additionally, linking to the independent reports and the fact-checking results would allow readers to verify the information for themselves.",
+        "key_factors": "Lack of detailed evidence and direct expert opinions.",
+        "specific_concerns": "Potential for improved factual accuracy and emotional tone.",
+        "relation_to_other_classifications": "Enhancing these aspects could further solidify the article's neutral stance and objective presentation."
+      }
+    },
+    "article_type": {
+      "objective": 0.7,
+      "subjective": 0.2,
+      "speculative": 0.1,
+      "emotive": 0.3,
+      "clickbait": 0.1
+    },
+    "sentiments": {
+      "joy": 0.0,
+      "trust": 0.2,
+      "fear": 0.4,
+      "surprise": 0.1,
+      "sadness": 0.1,
+      "disgust": 0.1,
+      "anger": 0.2,
+      "anticipation": 0.1
+    },
+    "topic": "politics",
+    "frames_detected": [
+      "crisis",
+      "economic_consequences",
+      "security"
+    ]
+  },
+  "timestamp": "2025-06-23T11:03:54.188937"
+}

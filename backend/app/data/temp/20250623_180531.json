@@ -1,0 +1,62 @@
+{
+  "text": "Amid rising tensions, government officials warn that the recent surge in immigration poses a \"serious threat to national stability.\" Meanwhile, independent reports suggest the influx has had a neutral or even positive economic impact. A viral video showing a confrontation at the border has sparked outrage online, though fact-checkers later revealed it was taken out of context. Experts urge the public to avoid jumping to conclusions and await verified information.",
+  "analysis": {
+    "factual_accuracy": 70,
+    "bias": "neutral",
+    "emotional_tone": "mixed",
+    "recommendation": "Readers should approach the article with a critical mindset, considering the potential for bias in government statements and the importance of context in interpreting video evidence. Seeking out multiple sources can provide a more balanced view of the immigration issue.",
+    "analysis_explanation": {
+      "factual_accuracy": {
+        "score": 70,
+        "key_indicators": "Presence of independent reports and fact-checking",
+        "examples_from_text": "Independent reports suggest a neutral or positive economic impact; fact-checkers revealed video was taken out of context.",
+        "weight_of_factors": "Independent verification and context consideration",
+        "comparison_with_similar_content": "Similar articles often lack independent verification or fail to provide context, affecting accuracy."
+      },
+      "bias": {
+        "classification": "Neutral",
+        "language_patterns": "Balanced presentation of government warnings and independent reports",
+        "examples_of_bias": "",
+        "context_and_implications": "The article attempts to present multiple perspectives without overtly favoring one.",
+        "effect_on_message": "Maintains a neutral stance, allowing readers to form their own opinions."
+      },
+      "emotional_tone": {
+        "classification": "Mixed",
+        "emotional_language_patterns": "Use of terms like 'serious threat', 'outrage', and 'jumping to conclusions'",
+        "examples_of_emotional_language": "'Serious threat to national stability', 'sparked outrage online'",
+        "impact_on_message": "Evokes a range of emotional responses, potentially affecting reader perception.",
+        "effect_on_credibility": "Mixed emotional tone may affect perceived credibility by suggesting a lack of impartiality."
+      },
+      "recommendation": {
+        "text": "Readers should approach the article with a critical mindset, considering the potential for bias in government statements and the importance of context in interpreting video evidence. Seeking out multiple sources can provide a more balanced view of the immigration issue.",
+        "key_factors": "Critical thinking, multiple sources",
+        "specific_concerns": "Potential bias in government statements, importance of video context",
+        "relation_to_other_classifications": "Supports the need for neutrality and factual accuracy in reporting."
+      }
+    },
+    "article_type": {
+      "objective": 0.7,
+      "subjective": 0.2,
+      "speculative": 0.1,
+      "emotive": 0.3,
+      "clickbait": 0.1
+    },
+    "sentiments": {
+      "joy": 0.0,
+      "trust": 0.2,
+      "fear": 0.4,
+      "surprise": 0.1,
+      "sadness": 0.2,
+      "disgust": 0.0,
+      "anger": 0.1,
+      "anticipation": 0.2
+    },
+    "topic": "politics",
+    "frames_detected": [
+      "crisis",
+      "economic_consequences",
+      "security"
+    ]
+  },
+  "timestamp": "2025-06-23T18:05:31.538839"
+}

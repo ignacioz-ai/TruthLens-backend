@@ -1,0 +1,62 @@
+{
+  "text": "Amid rising tensions, government officials warn that the recent surge in immigration poses a \"serious threat to national stability.\" Meanwhile, independent reports suggest the influx has had a neutral or even positive economic impact. A viral video showing a confrontation at the border has sparked outrage online, though fact-checkers later revealed it was taken out of context. Experts urge the public to avoid jumping to conclusions and await verified information.",
+  "analysis": {
+    "factual_accuracy": 70,
+    "bias": "neutral",
+    "emotional_tone": "mixed",
+    "recommendation": "Readers should consider seeking out the independent reports mentioned for a comprehensive understanding of the economic impact of immigration. Additionally, verifying the context of viral content before sharing can prevent the spread of misinformation.",
+    "analysis_explanation": {
+      "factual_accuracy": {
+        "score": 70,
+        "key_indicators": "Presence of independent reports and fact-checking efforts.",
+        "examples_from_text": "Independent reports suggest a neutral or positive economic impact; fact-checkers revealed viral video was taken out of context.",
+        "weight_of_factors": "Independent reports and fact-checking contribute positively to accuracy, but the lack of detailed evidence or sources slightly lowers the score.",
+        "comparison_with_similar_content": "Similar articles often fail to mention independent reports or fact-checking, leading to a higher accuracy score for this text."
+      },
+      "bias": {
+        "classification": "neutral",
+        "language_patterns": "The text presents multiple viewpoints without favoring one over the other.",
+        "examples_of_bias": "None detected.",
+        "context_and_implications": "By including both government warnings and independent reports, the text balances different perspectives.",
+        "effect_on_message": "The neutral stance helps maintain objectivity and credibility."
+      },
+      "emotional_tone": {
+        "classification": "mixed",
+        "emotional_language_patterns": "Use of terms like 'serious threat' and 'outrage' alongside urging for calm and context.",
+        "examples_of_emotional_language": "'serious threat to national stability', 'sparked outrage online'",
+        "impact_on_message": "The mixed emotional tone reflects the complexity of the issue, engaging readers without overwhelming bias.",
+        "effect_on_credibility": "Balancing emotional language with calls for verified information maintains credibility."
+      },
+      "recommendation": {
+        "text": "Readers should consider seeking out the independent reports mentioned for a comprehensive understanding of the economic impact of immigration. Additionally, verifying the context of viral content before sharing can prevent the spread of misinformation.",
+        "key_factors": "Importance of context in understanding viral content and the value of independent economic assessments.",
+        "specific_concerns": "Potential for misinformation spread through decontextualized viral content.",
+        "relation_to_other_classifications": "Recommendation supports the factual accuracy and neutral bias classifications by encouraging critical engagement with the content."
+      }
+    },
+    "article_type": {
+      "objective": 0.7,
+      "subjective": 0.3,
+      "speculative": 0.0,
+      "emotive": 0.2,
+      "clickbait": 0.0
+    },
+    "sentiments": {
+      "joy": 0.0,
+      "trust": 0.2,
+      "fear": 0.4,
+      "surprise": 0.0,
+      "sadness": 0.0,
+      "disgust": 0.0,
+      "anger": 0.3,
+      "anticipation": 0.1
+    },
+    "topic": "politics",
+    "frames_detected": [
+      "crisis",
+      "economic_consequences",
+      "security"
+    ]
+  },
+  "timestamp": "2025-06-23T12:09:49.836115"
+}

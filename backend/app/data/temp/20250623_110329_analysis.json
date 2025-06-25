@@ -1,0 +1,65 @@
+{
+  "fecha": "2025-06-23T11:03:29.546940",
+  "tipo_analisis": "texto",
+  "input_original": "Amid rising tensions, government officials warn that the recent surge in immigration poses a \"serious threat to national stability.\" Meanwhile, independent reports suggest the influx has had a neutral or even positive economic impact. A viral video showing a confrontation at the border has sparked outrage online, though fact-checkers later revealed it was taken out of context. Experts urge the public to avoid jumping to conclusions and await verified information.",
+  "resultado": {
+    "factual_accuracy": 80,
+    "bias": "neutral",
+    "emotional_tone": "mixed",
+    "recommendation": "The article presents a balanced view by juxtaposing government officials' warnings with independent reports and expert advice. However, it could benefit from providing more detailed evidence or data to support the claims made, especially regarding the economic impact of immigration and the context of the viral video.",
+    "analysis_explanation": {
+      "factual_accuracy": {
+        "score": 80,
+        "key_indicators": "Presence of independent reports and expert opinions, alongside government statements.",
+        "examples_from_text": "Independent reports suggest a neutral or positive economic impact; fact-checkers revealed the viral video was taken out of context.",
+        "weight_of_factors": "Balanced reporting and fact-checking contribute positively, but lack of detailed evidence slightly lowers the score.",
+        "comparison_with_similar_content": "Similar articles often fail to include independent reports or fact-checking, leading to a higher score for this article."
+      },
+      "bias": {
+        "classification": "neutral",
+        "language_patterns": "Use of both government warnings and independent reports without favoring one perspective.",
+        "examples_of_bias": "",
+        "context_and_implications": "The article's balanced approach helps maintain neutrality and provides a comprehensive view of the issue.",
+        "effect_on_message": "The neutrality of the article ensures that readers receive a balanced understanding of the situation."
+      },
+      "emotional_tone": {
+        "classification": "mixed",
+        "emotional_language_patterns": "References to 'serious threat to national stability' and 'outrage online' introduce negative emotions, while the call for patience and verification introduces a more neutral or positive tone.",
+        "examples_of_emotional_language": "'Serious threat to national stability', 'outrage online'",
+        "impact_on_message": "The mixed emotional tone may engage readers more deeply but could also lead to confusion about the article's stance.",
+        "effect_on_credibility": "The presence of both negative and neutral tones does not significantly impact credibility, thanks to the inclusion of fact-checking and expert opinions."
+      },
+      "recommendation": {
+        "text": "To enhance the article's credibility and factual accuracy, it is recommended to include more detailed data or evidence supporting the economic impact of immigration and the context of the viral video. Additionally, maintaining a balanced emotional tone throughout can help avoid potential reader confusion.",
+        "key_factors": "Inclusion of detailed evidence, balanced emotional tone.",
+        "specific_concerns": "Potential reader confusion due to mixed emotional tone.",
+        "relation_to_other_classifications": "The recommendation relates to improving factual accuracy and emotional tone, which are crucial for maintaining neutrality and objectivity."
+      }
+    },
+    "article_type": {
+      "objective": 0.7,
+      "subjective": 0.2,
+      "speculative": 0.1,
+      "emotive": 0.3,
+      "clickbait": 0.1
+    },
+    "sentiments": {
+      "joy": 0.0,
+      "trust": 0.2,
+      "fear": 0.4,
+      "surprise": 0.1,
+      "sadness": 0.1,
+      "disgust": 0.0,
+      "anger": 0.2,
+      "anticipation": 0.1
+    },
+    "topic": "politics",
+    "frames_detected": [
+      "crisis",
+      "economic_consequences",
+      "security"
+    ]
+  },
+  "usuario": null,
+  "es_publico": false
+}

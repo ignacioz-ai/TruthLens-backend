@@ -1,0 +1,58 @@
+{
+  "text": "hi",
+  "analysis": {
+    "factual_accuracy": 100,
+    "bias": "neutral",
+    "emotional_tone": "neutral",
+    "recommendation": "Given the lack of content, no specific recommendation can be provided.",
+    "analysis_explanation": {
+      "factual_accuracy": {
+        "score": 100,
+        "key_indicators": "The text 'hi' does not contain factual information to assess, thus it is considered factually accurate by default.",
+        "examples_from_text": "",
+        "weight_of_factors": "N/A",
+        "comparison_with_similar_content": "Similar greetings or minimal content texts are also considered factually accurate due to the lack of factual claims."
+      },
+      "bias": {
+        "classification": "Neutral",
+        "language_patterns": "The text 'hi' does not exhibit any language patterns indicative of bias.",
+        "examples_of_bias": "",
+        "context_and_implications": "N/A",
+        "effect_on_message": "The message remains unbiased due to the absence of content that could convey a biased perspective."
+      },
+      "emotional_tone": {
+        "classification": "Neutral",
+        "emotional_language_patterns": "The greeting 'hi' does not convey any emotional tone.",
+        "examples_of_emotional_language": "",
+        "impact_on_message": "N/A",
+        "effect_on_credibility": "The neutrality of the message does not impact its credibility."
+      },
+      "recommendation": {
+        "text": "Given the lack of content, no specific recommendation can be provided.",
+        "key_factors": "The absence of substantial content limits the analysis.",
+        "specific_concerns": "",
+        "relation_to_other_classifications": "The neutrality in bias and emotional tone is consistent with the lack of content."
+      }
+    },
+    "article_type": {
+      "objective": 1.0,
+      "subjective": 0.0,
+      "speculative": 0.0,
+      "emotive": 0.0,
+      "clickbait": 0.0
+    },
+    "sentiments": {
+      "joy": 0.0,
+      "trust": 0.0,
+      "fear": 0.0,
+      "surprise": 0.0,
+      "sadness": 0.0,
+      "disgust": 0.0,
+      "anger": 0.0,
+      "anticipation": 0.0
+    },
+    "topic": "other",
+    "frames_detected": []
+  },
+  "timestamp": "2025-06-23T18:05:38.280173"
+}
