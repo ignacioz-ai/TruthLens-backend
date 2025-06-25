@@ -36,7 +36,7 @@ class Settings(BaseSettings):
     # CORS Settings
     # In development, only allow localhost:5173. In production, only allow the Netlify domain.
     BACKEND_CORS_ORIGINS: List[str] = [
-        "http://localhost:5173" if os.getenv("ENV", "development") == "development" else "https://truthlens-ai.netlify.app"
+        "http://localhost:5173" if os.getenv("ENV", "development") == "development" else "https://truthlensai.netlify.app/"
     ]
     
     # OpenAI Settings
