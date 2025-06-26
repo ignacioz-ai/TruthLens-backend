@@ -1,6 +1,8 @@
 from typing import Dict, Optional
 import json
 import os
+import tempfile
+import shutil
 from datetime import datetime
 import logging
 from supabase import create_client, Client
@@ -10,9 +12,20 @@ logger = logging.getLogger(__name__)
 
 class StorageService:
     def __init__(self):
-        self.storage_dir = "backend/app/data/temp"
+        # Use absolute paths and create a proper temp directory
+        self.base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        self.storage_dir = os.path.join(self.base_dir, "app", "data", "temp")
+        
+        # Create temp directory if it doesn't exist
         os.makedirs(self.storage_dir, exist_ok=True)
+        
+        # Fallback to system temp directory if the above fails
+        if not os.access(self.storage_dir, os.W_OK):
+            self.storage_dir = tempfile.gettempdir()
+            logger.warning(f"Using system temp directory: {self.storage_dir}")
+        
         self.current_article_id = None
+        
         # Initialize Supabase client
         try:
             self.supabase: Client = create_client(
@@ -22,6 +35,65 @@ class StorageService:
         except Exception as e:
             logger.error(f"Error connecting to Supabase: {str(e)}")
             self.supabase = None
+
+    def get_temp_path(self, filename: str) -> str:
+        """Get absolute path for a temporary file."""
+        return os.path.join(self.storage_dir, filename)
+
+    def save_audio_file(self, audio_data: bytes, filename: str) -> str:
+        """Save audio file to temp directory and return the full path."""
+        file_path = self.get_temp_path(filename)
+        try:
+            with open(file_path, "wb") as f:
+                f.write(audio_data)
+            logger.info(f"Audio file saved: {file_path}")
+            return file_path
+        except Exception as e:
+            logger.error(f"Error saving audio file {filename}: {e}")
+            raise
+
+    def save_metadata(self, metadata: Dict, filename: str) -> str:
+        """Save metadata JSON file to temp directory."""
+        file_path = self.get_temp_path(filename)
+        try:
+            with open(file_path, "w", encoding="utf-8") as f:
+                json.dump(metadata, f, ensure_ascii=False, indent=2)
+            logger.info(f"Metadata saved: {file_path}")
+            return file_path
+        except Exception as e:
+            logger.error(f"Error saving metadata {filename}: {e}")
+            raise
+
+    def cleanup_old_files(self, max_age_hours: int = 24):
+        """Clean up old files from temp directory."""
+        current_time = datetime.now()
+        cleaned_count = 0
+        
+        try:
+            for filename in os.listdir(self.storage_dir):
+                file_path = os.path.join(self.storage_dir, filename)
+                
+                # Skip if not a file
+                if not os.path.isfile(file_path):
+                    continue
+                
+                # Check file age
+                file_time = datetime.fromtimestamp(os.path.getctime(file_path))
+                age_hours = (current_time - file_time).total_seconds() / 3600
+                
+                if age_hours > max_age_hours:
+                    try:
+                        os.remove(file_path)
+                        cleaned_count += 1
+                        logger.info(f"Old file deleted: {filename}")
+                    except Exception as e:
+                        logger.error(f"Error deleting file {filename}: {str(e)}")
+            
+            if cleaned_count > 0:
+                logger.info(f"Cleaned up {cleaned_count} old files")
+                
+        except Exception as e:
+            logger.error(f"Error during cleanup: {str(e)}")
 
     def save_article(self, text: str, analysis: Optional[Dict] = None) -> str:
         """Saves the article and its analysis, returns the article ID."""

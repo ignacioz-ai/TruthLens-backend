@@ -15,6 +15,10 @@ from app.websockets.voice_handler import handle_voice_websocket
 from dotenv import load_dotenv
 from pathlib import Path
 from app.routes import image_analysis
+from app.services.storage_service import StorageService
+from app.services.cache_manager import CacheManager
+import asyncio
+from typing import Optional
 
 # Configure logging for application-wide error tracking and monitoring
 logging.basicConfig(
@@ -35,6 +39,9 @@ class VoiceAssistantManager:
         self.elevenlabs_agent_id = settings.ELEVENLABS_AGENT_ID
         self.elevenlabs_base_url = settings.ELEVENLABS_BASE_URL
         self.model_id = settings.ELEVENLABS_MODEL_ID
+
+# Global cache manager instance
+cache_manager: Optional[CacheManager] = None
 
 def create_app() -> FastAPI:
     """
@@ -69,10 +76,35 @@ def create_app() -> FastAPI:
         allow_headers=["*"],
     )
 
-    # Mount static files directory for audio files using relative path
-    temp_dir = Path(__file__).parent / "app" / "data" / "temp"
-    temp_dir.mkdir(parents=True, exist_ok=True)
-    app.mount("/static", StaticFiles(directory=str(temp_dir)), name="static")
+    # Mount static files directory for audio files using StorageService
+    storage_service = StorageService()
+    static_dir = storage_service.storage_dir
+    logger.info(f"Mounting static files from: {static_dir}")
+    app.mount("/static", StaticFiles(directory=static_dir), name="static")
+
+    # Initialize cache manager
+    global cache_manager
+    cache_manager = CacheManager(storage_service)
+
+    @app.on_event("startup")
+    async def startup_event():
+        """Initialize cache manager on startup."""
+        try:
+            # Start automatic cache cleanup scheduler
+            asyncio.create_task(cache_manager.start_cleanup_scheduler(cleanup_interval_hours=2))
+            logger.info("Cache cleanup scheduler started")
+        except Exception as e:
+            logger.error(f"Error starting cache cleanup scheduler: {e}")
+
+    @app.on_event("shutdown")
+    async def shutdown_event():
+        """Clean up cache manager on shutdown."""
+        try:
+            if cache_manager:
+                await cache_manager.stop_cleanup_scheduler()
+                logger.info("Cache cleanup scheduler stopped")
+        except Exception as e:
+            logger.error(f"Error stopping cache cleanup scheduler: {e}")
 
     @app.get("/")
     async def root():

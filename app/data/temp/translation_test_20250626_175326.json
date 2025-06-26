@@ -1,0 +1,9 @@
+{
+  "original_text": "Hello world",
+  "translated_text": "Hola mundo",
+  "source_language": "en",
+  "target_language": "es",
+  "translation_mode": "formal",
+  "voice_id": "test_voice_id",
+  "timestamp": "2025-06-26T17:53:26.156288"
+}
